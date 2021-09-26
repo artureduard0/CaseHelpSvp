@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: casehelpsvp
+    networks:
+      - mysql-compose-network
+  backend:
+    build: 
+      context: ./backend
+    container_name: backend
+    environment:
+      - DB_SERVER=mysql
+    ports:
+      - 443:443
+    depends_on:
+      - mysql
+    networks:
+      - mysql-compose-network
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend
+
+networks: 
+  mysql-compose-network:
+    driver: bridge
