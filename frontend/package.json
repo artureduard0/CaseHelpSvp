@@ -6,15 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prod": "next build && next start"
   },
   "dependencies": {
+    "axios": "^0.23.0",
+    "js-file-download": "^0.4.12",
     "next": "11.1.2",
+    "nookies": "^2.5.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
-  "devDependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "react-paypal-button-v2": "^2.6.3",
+    "sass": "^1.42.1",
+    "styled-components": "^5.3.3"
   }
 }

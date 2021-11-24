@@ -1,0 +1,114 @@
+.mainContainer {
+  height: 92vh;
+}
+.backgroundImg {
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+
+  font-family: Ubuntu;
+  color: #980057;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.048) 90%, rgb(255, 255, 255) 100%), url('/backgroundImage.jpg');
+  background-size: cover;
+  background-position: 40% 75%;
+  background-repeat: no-repeat;
+
+  h1 {
+    align-self: flex-end;
+    grid-column: 4/14;
+    grid-row: 3;
+
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  p {
+    grid-column: 4 / 12;
+    grid-row: 4;
+    align-self: center;
+
+    font-size: 1.5rem;
+    font-weight: 300;
+    word-spacing: 2px;
+  }
+
+  a {
+    margin-top: 10px;
+
+    grid-column: 4 / 8;
+    grid-row: 5;
+    display: flex;
+    place-items: center;
+    place-content: center;
+
+    background-color: #980057;
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  a:hover {
+    background-color: #980056e5;
+    transition: 0.15s;
+  }
+}
+
+//Second VH
+
+.container {
+  height: 90vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  font-family: Ubuntu;
+}
+
+.column {
+  width: 25%;
+  height: 80%;
+  margin-top: 10vh;
+  margin-left: 4%;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+}
+
+#logoAboutUs {
+  width: 80%;
+  margin-bottom: 10%;
+}
+
+#secondColumn {
+  background-color: #980057;
+  color: white;
+  text-align: center;
+
+  div {
+    width: 90%;
+    height: 35%;
+    margin-top: 10%;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 400;
+    }
+
+    p {
+      margin-top: 5%;
+
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+  }
+
+  hr {
+    width: 70%;
+  }
+}

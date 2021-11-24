@@ -1,12 +1,9 @@
-FROM node:alpine
+FROM node:16.9.1-alpine
 
-EXPOSE 3000
-
-WORKDIR /frontend
+WORKDIR /app
 COPY package*.json ./
-COPY yarn.lock ./
 EXPOSE 3000
 
-RUN yarn install
-COPY . .
-CMD ["npm", "run", "dev"]
+RUN npm install
+COPY ./ ./
+CMD [ "npm", "run", "prod" ]

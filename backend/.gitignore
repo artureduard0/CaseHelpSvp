@@ -15,3 +15,8 @@ npm-debug.log*
 .env.production.local
 
 .vscode
+
+# outras pastas
+/coverage
+/temp/*
+!/temp/.gitkeep

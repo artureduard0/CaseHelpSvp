@@ -1,0 +1,54 @@
+.main {
+  margin-top: 20px;
+
+  flex-grow: 1;
+
+  display: grid;
+  justify-content: center;
+  text-align: center;
+
+  h2 {
+    margin-top: 60px;
+  }
+
+  form {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      width: 80%;
+      padding: 1rem 0 0.3rem 1rem;
+      margin-bottom: 3rem;
+
+      border: none;
+      border-bottom: #7d7d7d 1px solid;
+
+      font-size: 1rem;
+      transition: 0.15s linear;
+
+      &::placeholder {
+        font-size: 1rem;
+        color: #7d7b7b;
+      }
+
+      &:focus {
+        outline: 0;
+        border-bottom: var(--primary-color) 1px solid;
+      }
+
+      &:focus::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  button {
+    padding: 0.8rem 1.6rem;
+    margin-top: 0.5rem;
+
+    font-size: 1rem;
+  }
+}
